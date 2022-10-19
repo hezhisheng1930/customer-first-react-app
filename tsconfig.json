@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "strict": false,
+      "forceConsistentCasingInFileNames": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "noEmitOnError": false,
+      "isolatedModules": true,
+      "noEmit": false,
+      "jsx": "react",
+      "experimentalDecorators": true,
+      "suppressImplicitAnyIndexErrors": true,
+      "noImplicitAny": false,
+    },
+    "include": ["./src/**/*", "externals.d.ts"]
+  }
+  
