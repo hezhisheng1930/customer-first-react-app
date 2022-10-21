@@ -106,7 +106,6 @@ module.exports = {
                     from: "public/**/*",
                     globOptions: {
                         dot: true,
-                        gitignore: true,
                         ignore: ["**/file.*", "**/ignored-directory/**"],
                     },
                 },
