@@ -3,8 +3,8 @@ const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const cssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const copyWebpackPlugin = require('copy-webpack-plugin');
+const ResourceAnalysisWebpackPlugin = require('./plugins/resource-analysis-webpack-plugin');
 
 const { cpus } = require('os');
 
@@ -110,7 +110,8 @@ module.exports = {
                     },
                 },
             ]
-        })
+        }),
+        new ResourceAnalysisWebpackPlugin()
     ],
 
     optimization: {

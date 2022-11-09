@@ -3,6 +3,7 @@ module.exports = {
   root: true,
   parser: "@babel/eslint-parser",
   extends: "eslint:recommended",
+  requireConfigFile: false,
   overrides: [  // 由于项目中有ts代码，需要配置通过不同配置来解析对应的资源
     {
       files: ['*.ts', '*.tsx'],
