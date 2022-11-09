@@ -1,10 +1,10 @@
-
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const miniCssExtractPlugin = require('mini-css-extract-plugin');
 const cssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 const copyWebpackPlugin = require('copy-webpack-plugin');
 const ResourceAnalysisWebpackPlugin = require('./plugins/resource-analysis-webpack-plugin');
+const webpack = require('webpack');
 
 const { cpus } = require('os');
 
@@ -111,7 +111,10 @@ module.exports = {
                 },
             ]
         }),
-        new ResourceAnalysisWebpackPlugin()
+        new ResourceAnalysisWebpackPlugin(),
+        new webpack.ProvidePlugin({
+            'PROCESS': join(__dirname, `../.env.${process.env.NODE_ENV}.json`)
+        })
     ],
 
     optimization: {

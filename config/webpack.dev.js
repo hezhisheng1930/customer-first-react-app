@@ -1,8 +1,9 @@
-
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const EslintWebpackPlugin = require('eslint-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const ResourceAnalysisWebpackPlugin = require('./plugins/resource-analysis-webpack-plugin');
+const webpack = require('webpack')
 
 const { cpus } = require('os');
 
@@ -93,7 +94,11 @@ module.exports = {
             // cacheLocation: join(__dirname, '../node_modules/.cache/eslintCache'),
             threads: cpus().length
         }),
-        new ReactRefreshWebpackPlugin()
+        new ReactRefreshWebpackPlugin(),
+        new webpack.ProvidePlugin({
+            'PROCESS': join(__dirname, `../.env.${process.env.NODE_ENV}.json`)
+        }),
+        new ResourceAnalysisWebpackPlugin()
     ],
 
     resolve: {

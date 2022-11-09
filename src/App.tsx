@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate, Route, Routes } from 'react-router-dom';
 import { Button, Tooltip } from 'antd';
 
@@ -11,6 +11,11 @@ const App: React.FC<any> = () => {
     const handleJumpHome = (jumpType) => {
         useLocation(jumpType)
     }
+
+    useEffect(() => {
+        console.log(PROCESS.a);
+
+    }, [])
 
     return <main>
         hello react

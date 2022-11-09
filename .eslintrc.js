@@ -1,9 +1,11 @@
 
 module.exports = {
   root: true,
+  parserOptions: {
+    requireConfigFile: false,
+  },
   parser: "@babel/eslint-parser",
   extends: "eslint:recommended",
-  requireConfigFile: false,
   overrides: [  // 由于项目中有ts代码，需要配置通过不同配置来解析对应的资源
     {
       files: ['*.ts', '*.tsx'],
@@ -32,6 +34,8 @@ module.exports = {
     // 'indent': [2, 2, { // 缩进风格
     //   'SwitchCase': 1
     // }],customer-react-cli
+
+    'no-undef': 0,
 
 
     'no-dupe-keys': 2, // 在创建对象字面量时不允许键重复

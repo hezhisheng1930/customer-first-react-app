@@ -15,11 +15,12 @@
       "noEmitOnError": false,
       "isolatedModules": true,
       "noEmit": false,
-      "jsx": "react",
+      "jsx": "react-jsx",
       "experimentalDecorators": true,
       "suppressImplicitAnyIndexErrors": true,
       "noImplicitAny": false,
     },
+    "files": ["./src/index.d.ts"],
     "include": ["./src/**/*", "externals.d.ts"]
   }
   
