@@ -37,6 +37,7 @@ module.exports = {
 
     'no-undef': 0,
 
+    "react/react-in-jsx-scope":"off",
 
     'no-dupe-keys': 2, // 在创建对象字面量时不允许键重复
 

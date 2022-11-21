@@ -22,6 +22,8 @@ const App: React.FC<any> = (prop) => {
         {/* @ts-ignore */}
         <Button type="primary" onClick={() => handleJumpHome(13123213)}>about</Button>
 
+        <img src={require('@/assets/customerCheck.svg')} alt="" />
+
         <Suspense fallback={<>loading...</>}>
             {renderRoutes(prop.route.routes)}
         </Suspense>
