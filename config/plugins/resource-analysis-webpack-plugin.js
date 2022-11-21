@@ -38,6 +38,14 @@ class ResourceAnalysisWebpackPlugin {
             }
         })
 
+        compiler.hooks.run.tap('ResourceAnalysisWebpackPlugin', compilation => {
+        })
+
+        compiler.hooks.make.tap('ResourceAnalysisWebpackPlugin', compilation => {
+        })
+
+        
+
     }
 
     appendFile(fs, context, fileContent) {

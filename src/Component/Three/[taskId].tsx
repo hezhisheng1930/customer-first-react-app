@@ -1,12 +1,11 @@
 import React from 'react';
 
-const Home: React.FC<any> = (props) => {
+const Three: React.FC<any> = (props) => {
 
     console.log(props, 'props');
     
-
     return <main>
-        Home
+        Three
     </main>
 }
-export default Home
+export default Three

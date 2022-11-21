@@ -1,6 +1,14 @@
+import React, { Suspense } from 'react'
 import './style/index.less';
 import ReactDOM from 'react-dom/client';
-import RouterWrapper from './Router';
+import { renderRoutes } from "react-router-config";
+import routes from './Router';
+import { BrowserRouter } from 'react-router-dom';
+
+const app = <BrowserRouter>
+        {renderRoutes(routes)}
+    </BrowserRouter>
 
 const root = ReactDOM.createRoot(document.getElementById('app'));
-root.render(RouterWrapper);
+
+root.render(app);

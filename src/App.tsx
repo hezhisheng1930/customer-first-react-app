@@ -1,20 +1,17 @@
-import React, { useEffect } from 'react';
-import { useNavigate, Route, Routes } from 'react-router-dom';
-import { Button, Tooltip } from 'antd';
+import React, { useEffect, Suspense } from 'react';
+import { useHistory } from 'react-router-dom';
+import { Button } from 'antd';
+import { renderRoutes } from "react-router-config";
+const App: React.FC<any> = (prop) => {
 
-import { Home, About } from './Router/exportFile'
-
-const App: React.FC<any> = () => {
-
-    const useLocation = useNavigate();
+    const useLocation = useHistory();
 
     const handleJumpHome = (jumpType) => {
-        useLocation(jumpType)
+        useLocation.push(`/${jumpType}`)
     }
 
     useEffect(() => {
         console.log(PROCESS.a);
-
     }, [])
 
     return <main>
@@ -23,16 +20,11 @@ const App: React.FC<any> = () => {
         {/* @ts-ignore */}
         <Button type="primary" onClick={() => handleJumpHome('home')}>home</Button>
         {/* @ts-ignore */}
-        <Button type="primary" onClick={() => handleJumpHome('about')}>about</Button>
+        <Button type="primary" onClick={() => handleJumpHome(13123213)}>about</Button>
 
-        <section style={{ height: '100px' }} ></section>
-        <Routes>
-            <Route path='/home' element={<Home />} />
-        </Routes>
-
-        <Routes>
-            <Route path='/about' element={<About />} />
-        </Routes>
+        <Suspense fallback={<>loading...</>}>
+            {renderRoutes(prop.route.routes)}
+        </Suspense>
 
     </main>
 }

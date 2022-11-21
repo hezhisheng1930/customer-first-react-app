@@ -1,4 +1,11 @@
+import { lazy } from 'react';
 
-export { default as App } from '../App';
-export { default as Home } from '../Component/Home';
-export { default as About } from '../Component/About';
+const App = lazy(() => import('../App'));
+const Home = lazy(() => import('../Component/Home'));
+const About = lazy(() => import('../Component/Three/[taskId]'));
+
+export {
+    App,
+    Home,
+    About
+}
