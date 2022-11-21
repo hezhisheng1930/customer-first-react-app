@@ -1,0 +1,19 @@
+[index]  fileName >>> fileSize
+
+[1]  static/js/650.chunk.js >>> 213.04KB
+[2]  static/js/605.chunk.js >>> 212.07KB
+[3]  public/index.html >>> 0.29KB
+[4]  public/test.txt >>> 0.00KB
+[5]  static/js/650.chunk.js.map >>> 273.13KB
+[6]  static/js/605.chunk.js.map >>> 268.13KB
+[7]  index.html >>> 0.60KB
+[8]  static/css/main.55141c148b.css >>> 0.08KB
+[9]  main.cf35506cd3.js >>> 4.50KB
+[10]  runtime~main.d3fbd6f5ed.js >>> 8.19KB
+[11]  static/css/605.2d491a75f3.css >>> 531.96KB
+[12]  static/css/main.55141c148b.css.map >>> 0.28KB
+[13]  main.cf35506cd3.js.map >>> 4.65KB
+[14]  runtime~main.d3fbd6f5ed.js.map >>> 7.46KB
+[15]  static/css/605.2d491a75f3.css.map >>> 1473.64KB
+
+totalSize >>> 2.93MB
