@@ -8,14 +8,6 @@ class ResourceAnalysisWebpackPlugin {
 
         const context = compiler.context,
             fs = compiler.outputFileSystem;
-            
-            compiler.hooks.run.tap('pluginName', (compilation) => {
-                console.log(compilation, 'webpack 构建过程开始！');
-              });
-
-        compiler.hooks.make.tap('ResourceAnalysisWebpackPlugin', compilation => {
-            // console.log(compilation, 'compilation');
-        })
 
         compiler.hooks.emit.tap('ResourceAnalysisWebpackPlugin', compilation => {
 
