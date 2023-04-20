@@ -15,7 +15,7 @@ const App: React.FC<any> = (prop) => {
     }, [])
 
     return <main>
-        hello react
+        hello react (test tag)
 
         {/* @ts-ignore */}
         <Button type="primary" onClick={() => handleJumpHome('home')}>home</Button>
