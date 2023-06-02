@@ -3,7 +3,9 @@ import {
   About,
   Home,
   App,
-  BeLazy
+  BeLazy,
+  Thread,
+  Upload
 } from './exportFile';
 
 const routes = [
@@ -18,6 +20,14 @@ const routes = [
       {
         path: '/imageBeLazy',
         component: BeLazy
+      },
+      {
+        path: '/thread',
+        component: Thread
+      },
+      {
+        path: '/upload',
+        component: Upload
       },
       {
         path: '/:id',

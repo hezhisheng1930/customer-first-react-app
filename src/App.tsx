@@ -18,12 +18,15 @@ const App: React.FC<any> = (prop) => {
     return <main>
         hello react (test tag)
 
-        {/* @ts-ignore */}
-        <Button type="primary" onClick={() => handleJumpHome('home')}>home</Button>
-        {/* @ts-ignore */}
-        <Button type="primary" onClick={() => handleJumpHome(13123213)}>about</Button>
-        {/* @ts-ignore */}
-        <Button type="primary" onClick={() => handleJumpHome("imageBeLazy")}>图片懒加载</Button>
+        <Button type="primary" onClick={() => handleJumpHome('home')}>home</Button>&nbsp;
+
+        <Button type="primary" onClick={() => handleJumpHome(13123213)}>about</Button>&nbsp;
+
+        <Button type="primary" onClick={() => handleJumpHome("imageBeLazy")}>图片懒加载</Button>&nbsp;
+
+        <Button type="primary" onClick={() => handleJumpHome("thread")}>多线程</Button>&nbsp;
+
+        <Button type="primary" onClick={() => handleJumpHome("upload")}>选择文件并预览</Button>&nbsp;
 
         <img src={require('@/assets/customerCheck.svg')} alt="" />
 

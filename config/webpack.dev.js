@@ -76,6 +76,16 @@ module.exports = {
                                 }
                             },
                         ]
+                    },
+                    {
+                        test: /\.worker\.js$/,
+                        use: {
+                            loader: 'worker-loader',
+                            options: {
+                                // 配置 worker 文件的输出路径和文件名规则
+                                filename: '[name].[contenthash].js',
+                            },
+                        },
                     }
                 ]
             }
