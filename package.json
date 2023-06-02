@@ -50,6 +50,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "devDependencies": {
-    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.8"
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.8",
+    "@types/webpack": "^5.28.1"
   }
 }

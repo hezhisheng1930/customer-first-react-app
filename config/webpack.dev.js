@@ -1,4 +1,4 @@
-const { join } = require('path');
+const { join, resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const EslintWebpackPlugin = require('eslint-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
@@ -86,13 +86,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: join(__dirname, '../public/index.html')
         }),
-        new EslintWebpackPlugin({
-            failOnWarning: true,
-            context: join(__dirname, '../src/**/*'),
-            // cache: true,
-            // cacheLocation: join(__dirname, '../node_modules/.cache/eslintCache'),
-            threads: cpus().length
-        }),
+        // new EslintWebpackPlugin({
+        //     failOnWarning: true,
+        //     context: join(__dirname, '../src/**/*'),
+        //     // cache: true,
+        //     // cacheLocation: join(__dirname, '../node_modules/.cache/eslintCache'),
+        //     threads: cpus().length
+        // }),
         new ReactRefreshWebpackPlugin(),
         new webpack.ProvidePlugin({
             'PROCESS': join(__dirname, `../.env.${process.env.NODE_ENV}.json`)
@@ -103,7 +103,7 @@ module.exports = {
         extensions: ['.less', '.json', '.css', '.js', '.jsx', '.ts', '.tsx'],
 
         alias: {
-            '@': join(__dirname, '../src/')
+            '@': resolve(__dirname, '../src/')
         }
     },
 

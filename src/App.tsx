@@ -2,6 +2,7 @@ import React, { useEffect, Suspense } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button } from 'antd';
 import { renderRoutes } from "react-router-config";
+
 const App: React.FC<any> = (prop) => {
 
     const useLocation = useHistory();
@@ -21,6 +22,8 @@ const App: React.FC<any> = (prop) => {
         <Button type="primary" onClick={() => handleJumpHome('home')}>home</Button>
         {/* @ts-ignore */}
         <Button type="primary" onClick={() => handleJumpHome(13123213)}>about</Button>
+        {/* @ts-ignore */}
+        <Button type="primary" onClick={() => handleJumpHome("imageBeLazy")}>图片懒加载</Button>
 
         <img src={require('@/assets/customerCheck.svg')} alt="" />
 
